@@ -52,9 +52,11 @@ echo "Hello ${name}"
 
 4) read input from user:
 --------------------
-echo "Enter Your Age: "
-read age
-echo "Your Age is: ${age}"
+echo "Enter Your Name: "
+read name
+echo "Your Name is: ${name}"
+read -p "Enter your age: " age
+echo "${age}"
 
 5) for sleep:
 ----------
@@ -72,7 +74,8 @@ echo "hello i am $1"
 for run:
 bash filename.sh <your_argument>
 
-7) if/else
+7) if/else:
+--------
 #!/bin/bash
 echo "Enter Your String: "
 read string
@@ -82,3 +85,52 @@ then
 else
  echo "sorry"
 fi
+
+8)Array:
+------
+#!/bin/bash
+#Array
+myArray=( 1 2 30.5 Hello "Hey man" )
+echo "${myArray[0]}"
+echo "${myArray[2]}"
+echo "${myArray[*]}"
+
+#how to find no. of values in an array
+echo "length: ${#myArray[*]}"
+
+#get value from specific position
+echo "values from index 2-3 ${myArray[*]:2:2}"
+
+#update an array with new values
+myArray+=( New 30 40 )
+echo "new array ${myArray[*]}"
+
+#how to store key value pairs
+declare -A myArray2
+myArray2=( [name]=Denis [age]=20 [city]=veraval )
+echo "Name is: ${myArray2[name]}"
+echo "Age is: ${myArray2[age]}"
+
+9) String:
+-------
+#!/bin/bash
+
+myStr="My Name is Denis Ruparel"
+
+# find length of string
+echo "Length: ${#myStr}"
+
+# upper case
+echo "Upper Case: ${myStr^^}"
+
+# Lower Case
+echo "Lower Case: ${myStr,,}"
+
+# replace the word
+echo "Replace: ${myStr/Denis/Nemis}"
+
+# slice
+echo "slice: ${myStr:11:15}"
+
+10)Airthmatic Operations:
+----------------------

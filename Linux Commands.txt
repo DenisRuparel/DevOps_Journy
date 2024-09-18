@@ -8,7 +8,7 @@ basic Linux commands:
 -> delete folder or directory
 
 2) ls
--> list dow everything in current directory
+-> list down everything in current directory
 
 3)pwd
 -> shows present working directory
@@ -20,7 +20,7 @@ basic Linux commands:
 -> from use of this we can go previous directory
 
 6) touch <file_name.extension>
--> it is use for make a new file
+-> it is use for make a new file which is empty
 
 7)vim <file_name.extension>
 -> it opens editor for add/edit content in your file
@@ -100,3 +100,6 @@ basic Linux commands:
 
 30) scp
 -> scp (Secure Copy Protocol) is a command-line utility used to securely transfer files and directories between hosts on a network.
+
+31) rm -r <dir_name/file_name>
+-> it removes sub directory forcefully if any of the content is present on that particular sub directory
