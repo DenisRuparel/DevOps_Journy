@@ -1,0 +1,10 @@
+1) what is devops
+2) know about Linux
+3) basics of shell scripting
+4) git & GitHub
+5) ansible
+6) CI/CD
+7) containers (docker)
+8) Kubernetes
+9) terraform
+10) AWS / AZURE

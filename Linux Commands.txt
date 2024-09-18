@@ -1,0 +1,96 @@
+basic Linux commands:
+-------------------
+
+1) mkdir <directory_name>
+-> make new folder or directory
+
+*) rmdir <directory_name>
+-> delete folder or directory
+
+2) ls
+-> list dow everything in current directory
+
+3)pwd
+-> shows present working directory
+
+4) cd <directory_name>
+-> it changes directory what you want
+
+5) cd ..
+-> from use of this we can go previous directory
+
+6) touch <file_name.extension>
+-> it is use for make a new file
+
+7)vim <file_name.extension>
+-> it opens editor for add/edit content in your file
+-> i - for insert
+-> when insert is complete you should press esc and then write :wq means write and quit
+
+8) cat <file_name.extension>
+-> it prints the content of the file 
+
+9) nano <file_name.extension>
+-> it opens editor for create, add or edit content in your file
+-> for quit you can press ctrl + x
+
+10) clear 
+-> for clear the terminal
+
+11) touch <<file_name>{1..n}.extension>
+-> for create n no. of files
+
+12) rm file*
+-> it deletes the file which name starts from "file"
+
+13) cp <folder_1/*> <folder_2/>		[ here * means all content] 
+-> it copies all content of folder_1 in folder_2
+
+14) mv <old_folder_name> <new_folder_name>
+-> it renames the folder and moves content of old_folder to new_folder
+
+15) wget <URL_to_download_file>
+ -> it helps to download file from the internet
+
+16) sudo apt update
+-> for update the system
+
+17) sudo su
+-> it logins as a root user
+
+18) whoami
+-> it returns the current user
+
+19) apt update --upgrade
+-> it updates the system and give latest version of system
+
+20) service <service_name> status	e.x.	[service docker status]
+-> it is the command which checks the status of process
+
+21) service <service_name> stop		e.x.	[service docker stop]
+-> it is the command which stops the service of process
+
+22) systemctl status <service_name>	e.x	[systemctl status docker]
+-> systemctl is a command-line utility used to control and manage the systemd system and service manager
+
+23) systemctl start <service_name>	e.x	[systemctl start docker]
+-> Start a Service in background
+
+24) chmod [options] mode[,mode] file1 [file2 ...]
+-> chmod modifying the permissions for the owner, group, and others for a file or directory
+
+25) df -H
+-> df stands for "disk free".
+-> The -H option (human-readable) prints sizes in powers of 1000 (e.g., KB, MB, GB).
+
+26) df -H | awk '{print $1} NR==5{exit}'
+-> awk '{print $1}': This part of the command uses awk, a text processing tool, to print the first column of the input it receives.
+-> NR==1 {print $1}: Prints the first column of the first line (header).
+-> NR>1 && NR<=5 {print $1}: Prints the first column of lines 2 to 5.
+-> NR==5 {exit}: Exits after printing the fifth line.
+
+27) netstat -a
+-> The command netstat -a is used to display network connections, routing tables, interface statistics, masquerade connections, and multicast memberships. The -a option specifically shows all active connections and listening ports.
+
+28) ls -a
+-> The command ls -a is used to list all files and directories in the current directory, including hidden ones. Hidden files in Unix-like systems typically start with a dot (.).

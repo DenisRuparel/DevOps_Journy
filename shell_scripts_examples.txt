@@ -1,0 +1,43 @@
+shell scripting basics:
+----------------
+
+1) echo "<enter your message to print>"
+-> it prints the message what you want to print
+-> we can also write this command like this echo "hello i am denis ruparel" > testfile.txt
+
+2) nano <file_name>.sh
+-> it creates shell file in your directory
+
+demo script:
+----------
+#!/bin/bash
+echo "hello world"
+
+3) bash <file_name>.sh
+-> it runs (executes) the shell script file
+
+--------------------------
+or another way to run shell file
+--------------------------
+
+*) ./<file_name>.sh
+-> note: if permission is given by you[admin] to execute the file then this command will work otherwise first you[admin] should give the information to run the file
+
+4) chmod [options] mode[,mode] file1 [file2 ...]
+-> chmod modifying the permissions for the owner, group, and others for a file or directory
+
+shell scripts examples:
+------------------
+
+1)
+#!/bin/bash
+echo "hello world"
+
+2) 
+#!/bin/bash
+mkdir new_dir
+cd new_dir
+touch newfile.txt
+echo "this is a demo script" > newfile.txt
+cat newfile.txt
+
