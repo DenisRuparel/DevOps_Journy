@@ -41,3 +41,44 @@ touch newfile.txt
 echo "this is a demo script" > newfile.txt
 cat newfile.txt
 
+3) variables:
+----------
+#!/bin/bash
+echo $BASH
+name="Denis"
+echo "Hello ${name}"
+
+-> # is use for comment in shell script
+
+4) read input from user:
+--------------------
+echo "Enter Your Age: "
+read age
+echo "Your Age is: ${age}"
+
+5) for sleep:
+----------
+echo "Hello!"
+sleep 2
+echo "my name is denis"
+sleep 2
+echo "bye"
+
+6) for giving arguments:
+--------------------
+#!/bin/bash
+echo "hello i am $1"
+
+for run:
+bash filename.sh <your_argument>
+
+7) if/else
+#!/bin/bash
+echo "Enter Your String: "
+read string
+if [ $string = "denis" ]
+then
+ echo "you are elgible"
+else
+ echo "sorry"
+fi

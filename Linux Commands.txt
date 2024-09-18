@@ -94,3 +94,9 @@ basic Linux commands:
 
 28) ls -a
 -> The command ls -a is used to list all files and directories in the current directory, including hidden ones. Hidden files in Unix-like systems typically start with a dot (.).
+
+29) man
+-> man command is used to access the manual pages for various commands and utilities.
+
+30) scp
+-> scp (Secure Copy Protocol) is a command-line utility used to securely transfer files and directories between hosts on a network.
