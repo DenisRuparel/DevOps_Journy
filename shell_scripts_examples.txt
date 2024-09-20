@@ -155,7 +155,43 @@ echo "Division is: $div"
 
 echo "$(($a+$b))"
 
-11)
+11) switch case
 ----------------------
 #!/bin/bash
+echo "Choose Option: "
+echo "a = To see current date"
+echo "b = To see list of files"
 
+read choice
+
+case $choice in
+        a) date;;
+        b) ls;;
+        *) echo "Enter valid input"
+esac
+
+12)Logical Operators:
+------------------
+#!/bin/bash
+
+# AND operator
+read -p "what is your age: " age
+read -p "Your Country: " country
+
+if [[ $age -ge 18 ]] && [[ $country -eq "india" ]]
+then
+        echo "you can vote"
+else
+        echo "you can't vote"
+fi
+
+# OR  operator
+read -p "what is your age: " age
+read -p "your country: " country
+
+if [[ $age -ge 18 ]] || [[ $country -eq "india" ]]
+then
+        echo "you can vote"
+else
+        echo "you can't vote"
+fi
