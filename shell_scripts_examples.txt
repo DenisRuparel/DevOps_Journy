@@ -195,3 +195,32 @@ then
 else
         echo "you can't vote"
 fi
+
+# Ternary operation
+age=18
+[[ $age -ge 18 ]] && echo "Adult" || echo "Minor"
+
+13)for loops:
+----------
+#!/bin/bash
+for i in 1 2 3 4 5 6 8 9 10
+do
+        echo "Number is: $i"
+done
+
+for name in Raju Sham Baburao
+do
+        echo "Name is: $name"
+done
+
+for i in {1..10}
+do
+        echo "Number is: $i"
+done
+
+FILE="/home/vagrant/shell_scripts/names.txt"
+for name in $(cat $FILE)
+do
+        echo "name is: $name"
+done
+
