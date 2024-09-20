@@ -74,16 +74,19 @@ echo "hello i am $1"
 for run:
 bash filename.sh <your_argument>
 
-7) if/else:
---------
+7) conditional statments:
+--------------------
 #!/bin/bash
-echo "Enter Your String: "
-read string
-if [ $string = "denis" ]
+read -p "Enter your marks: " marks
+
+if [[ $marks -ge 80 ]]
 then
- echo "you are elgible"
+        echo "First"
+elif [[ $marks -ge 60 ]]
+then
+        echo "Second"
 else
- echo "sorry"
+        echo "Fail"
 fi
 
 8)Array:
@@ -134,3 +137,25 @@ echo "slice: ${myStr:11:15}"
 
 10)Airthmatic Operations:
 ----------------------
+#!/bin/bash
+#Maths Calculation
+
+a=10
+b=2
+
+let add=$a+$b
+let sub=$a-$b
+let mul=$a*$b
+let div=$a/$b
+
+echo "Addition is: $add"
+echo "Subtraction is: $sub"
+echo "Multiplication is: $mul"
+echo "Division is: $div"
+
+echo "$(($a+$b))"
+
+11)
+----------------------
+#!/bin/bash
+
