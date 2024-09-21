@@ -224,3 +224,166 @@ do
         echo "name is: $name"
 done
 
+14)while loops:
+------------
+#!/bin/bash
+count=0
+num=10
+while [[ $count -le $num ]]
+do
+        echo "numbers: $count"
+        let count++
+done
+
+15)until loops:
+------------
+#!/bin/bash
+a=10
+until [[ $a -eq 1 ]]
+do
+        echo $a
+        a=`expr $a - 1`
+done
+
+16)infinite while loop:
+------------------
+#!/bin/bash
+while true
+do
+        echo "Hi"
+        sleep 2s
+done
+
+17)infinite for loop:
+----------------
+#!/bin/bash
+for (( ;; ))
+do
+        echo "Hello"
+        sleep 2s
+done
+
+18)while loop with file:
+-------------------
+#!/bin/bash
+while read myVar
+do
+        echo "names from file is $myVar"
+done < names.txt
+
+# to read content from csv file
+while IFS="," read id name age
+do
+        echo "Id is: $id"
+        echo "Name is: $name"
+        echo "Age is: $age"
+done < names.csv
+
+# second way
+cat names.csv | awk 'NR!=1 {print}' | while IFS="," read -r id name age; do
+  echo "ID: $id, Name: $name, Age: $age"
+done
+
+19)functions:
+-----------
+#!/bin/bash
+function myfun {
+        echo "Hi"
+}
+
+addition() {
+        local a=$1
+        local b=$2
+        let sum=$a+$b
+        echo "$sum"
+}
+
+myfun
+addition 10 20
+
+20) argument passing:
+------------------
+#!/bin/bash
+
+# to access the arguments
+
+echo "First argument is $1"
+echo "Second argument is $2"
+
+echo "All the arguments are - $@"
+
+echo "Number of arguments are: $#"
+
+# for loop to access the values from arguments
+
+for filename in $@
+do
+        echo "Copying File - $filename"
+done
+
+# shifting arguments
+echo "creating user"
+echo "username is $1"
+shift
+echo "description is $@"
+
+21) break & continue:
+------------------
+#!/bin/bash
+# confirm that given number is present or not
+read -p "Enter your no: " no
+
+for i in 1 2 3 4 5 6 7 8 9
+do
+        if [[ $no -eq $i ]]
+        then
+                echo "$no is Found..."
+                break
+        fi
+        echo "number is $i"
+done
+
+# print odd no:
+for i in 1 2 3 4 5 6 7 8 9 10
+do
+        let r=$i%2
+        if [[ $r -eq 0 ]]
+        then
+                continue
+        fi
+        echo "odd no. is $i"
+done
+
+
+
+
+
+website connectivity check:
+----------------------
+#!/bin/bash
+read -p "which site you want to check?" site
+ping -c 1 $site
+sleep 5s
+
+if [[ $? -eq 0 ]]
+then
+        echo "Successfully Connected $site"
+else
+        echo "Unable to connect $site"
+fi
+
+check file or directory exist or not
+----------------------------
+#!bin/bash
+FILEPATH="/home/vagrant/shell_scripts/names.csv"
+DIRNAME="/home/vagrant/shell_scripts"
+
+if [[ -f $FILEPATH ]]  || [[ -d $DIRNAME ]]
+then
+        echo "file or dir exist"
+else
+        echo "file or dir not exist"
+        exit 1
+fi
+
+

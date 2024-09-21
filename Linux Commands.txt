@@ -103,3 +103,12 @@ basic Linux commands:
 
 31) rm -r <dir_name/file_name>
 -> it removes sub directory forcefully if any of the content is present on that particular sub directory
+
+32) basename /home/vagrant/shell_scripts/names.csv
+-> strip directory info and only give file name
+
+33) dirname
+-> strip filename and gives directory path
+
+34) realpath
+-> gives you full path for a file
