@@ -112,3 +112,14 @@ basic Linux commands:
 
 34) realpath
 -> gives you full path for a file
+
+35) echo $RANDOM
+-> generates random integer between 0 to 32767
+
+36) echo $UID
+-> user id of the user logged in
+
+37) <command> > <file_name>
+-> e.x. ls > file.txt
+-> e.x. date >> file.txt
+-> The command ls > file.txt will list the contents of the current directory and redirect that output to a file named file.txt. If file.txt already exists, it will be overwritten. If you want to append the output instead, you can use ls >> file.txt.
