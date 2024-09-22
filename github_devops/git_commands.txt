@@ -1,0 +1,65 @@
+Git Commands:
+------------
+
+This Gist contains all the useful commands for Git:
+
+Commands:
+
+1) git config --global user.name "<your username>"
+   git config --global user.email "<your email>"
+-> Set global username and email for Git (Locally).
+
+2) git init
+-> Initialise an empty Git Repository
+
+3) git clone <repository URL>
+-> Clone an existing Git Repository
+
+4) git add <filename>
+-> Add file/stage to git
+
+5) git add .
+-> Add all the files to git
+
+6) git commit -m "<your commit message>"
+-> Commit all the staged files to git
+
+7) git restore <filename>
+   git checkout <filename>
+-> Restore the file from being modified to Tracked
+
+8) git status
+-> Show the status of your Git respository
+
+9) git branch
+-> Show the branches of your git repository
+
+10) git checkout -b <branch name>
+-> Checkout to a new branch
+
+11) git checkout <branch name>
+-> Checkout to an existing branch
+
+12) git branch -d <branch name>
+-> Remove a branch from Git
+
+13) git remote -v
+-> Show remote origin URL
+
+14) git remote add origin <your remote git URL>
+-> Add remote origin URL
+
+15) git remote remove origin 
+-> Remove remote origin URL
+
+16) git fetch
+-> Fetch all the remote branches
+
+17) git push origin <branch name>
+-> Push your local changes to remote branch
+
+18) git pull origin <branch name>
+-> Pull your remote changes to local branch
+
+19) git log
+-> Check you git commits and logs
