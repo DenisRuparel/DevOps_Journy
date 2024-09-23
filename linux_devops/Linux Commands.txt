@@ -123,3 +123,41 @@ basic Linux commands:
 -> e.x. ls > file.txt
 -> e.x. date >> file.txt
 -> The command ls > file.txt will list the contents of the current directory and redirect that output to a file named file.txt. If file.txt already exists, it will be overwritten. If you want to append the output instead, you can use ls >> file.txt.
+
+38) nohup command_name &
+-> The nohup command is used to run another command such that it continues running even after you log out or close the terminal. This is particularly useful for long-running processes.
+
+39) at [time] [date]
+-> at command allows you to schedule a command to run at a specific time in the future.
+
+40) atq
+-> Listing Scheduled Jobs
+
+41) atrm job_number
+-> atrm job_number
+
+42) crontab
+-> The crontab command is used to schedule recurring tasks, It allows users to run scripts or commands at specified intervals, such as daily, weekly, or monthly.
+
+*) crontab -e
+-> To edit the crontab for the current user, use:
+
+*) * * * * * command_to_run
+-> Each line in a crontab file follows this format:
+
+-> The five asterisks represent different time and date fields:
+
+Minute (0-59)
+Hour (0-23)
+Day of Month (1-31)
+Month (1-12)
+Day of Week (0-7) (Sunday is both 0 and 7)
+
+-> Run a script every day at 2 AM:
+-> 0 2 * * * /path/to/script.sh
+
+*) crontab -l
+-> View current crontab
+
+*) crontab -r
+-> Remove the current crontab

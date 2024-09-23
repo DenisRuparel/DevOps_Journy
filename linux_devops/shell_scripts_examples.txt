@@ -304,7 +304,7 @@ addition 10 20
 20) argument passing:
 ------------------
 #!/bin/bash
-
+set -x
 # to access the arguments
 
 echo "First argument is $1"
