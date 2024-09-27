@@ -1,0 +1,13 @@
+#!/bin/bash
+# monitoring the free fs space disk
+
+FU=(df -h | egrep -v "Filesystem|tmpfs" | grep "vagrant" | awk '{print $5}' | tr -d %)
+
+TO="deniskalpeshbhai436@gmail.com"
+
+if [[ $FU -le 20 ]];
+then
+        echo "Warning! Disk Space is Low... $FU%" | mail -s "Disk Space Alert...!" $TO
+else
+        echo "All Good..."
+fi
