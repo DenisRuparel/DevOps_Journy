@@ -61,5 +61,11 @@ Commands:
 18) git pull origin <branch name>
 -> Pull your remote changes to local branch
 
-19) git log
+19) git log (or) git log --oneline
 -> Check you git commits and logs
+
+
+
+
+
+*) Head represents the latest commit on your repository
