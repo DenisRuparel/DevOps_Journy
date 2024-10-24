@@ -1,0 +1,33 @@
+Jenkins Notes:
+------------
+
+1) for creating a simple new job:
+---------------------
+step 1: click on new item on sidebar
+
+step 2: enter name for an item
+
+step 3: click a free style project and click on OK button
+
+step 4: enter description for a job what you want
+
+step 5: select a build step:
+	if windows: execute windows batch command
+	if Linux: execute shell
+
+note: assume that it is one type of command line.
+
+step 6: you can write commands in this space
+	example: echo "Hello World"
+
+step 7: click on save button and view on dashboard your job will be shown
+
+2) for building a job
+----------------
+step 1: go inside the job what you want to build
+
+step 2: click on build now on sidebar
+
+step 3: show build history #1 will be shown means 1st build is complete if green tick is shown otherwise red tick is for failure
+
+step 4: click on #1 and click on console output your output will be shown if your job is successfully build
