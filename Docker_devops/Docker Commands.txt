@@ -1,0 +1,94 @@
+Docker Commands:
+----------------
+
+* for building docker image:
+->	docker build .
+
+* for building docker image with specific name and version:
+->	docker build -t <any_name>:<version> .
+
+* for listing images:
+->	docker image ls
+
+* for listing running containers:
+->	docker ps
+
+* for listing all containers:
+->	docker ps -a
+
+* for run image within container:
+->	docker run <image_id> 
+
+* for run image outside the container:
+->	docker run -p <host_port>:<container_port> <image_id> 
+
+* for run container in interactive mode:
+->	docker run -it <image_id> 
+
+* for stop container:
+->	docker stop <container_name>
+
+* for run container in detached [background] mode:
+->	docker run -d -p <host_port>:<container_port> <image_id> 
+
+* for run multiple containers:
+->	docker run -p <host_port>:<container_port> <image_id>
+->	docker run -p <different_host_port>:<container_port> <image_id>
+
+* for removing containers: 
+->	docker rm <container_name>			
+
+Note:	[ we can also give multiple names in command for remove container ]
+
+* for delete container immediately after stop the container:
+->	docker run -d --rm -p <host_port>:<container_port> <image_id> 
+
+* for giving our user define name for container:
+->	docker run -d --rm --name "<your_name>" -p <host_port>:<container_port> <image_id>
+
+* for removing docker image:
+->	docker rmi <image_name>:<version>
+
+
+
+
+** if any changes any project then:
+->	docker build -t <any_name>:<differnt version then first> .
+
+* for run this image:
+->	docker run -d --rm --name "<image_name>" -p <host_port>:<container_port> <image_id>
+							or
+->	docker run -d --rm --name "<image_name>" -p <host_port>:<container_port> <image_name>:<your_version>
+
+
+
+** using predefined images:
+-> 	docker pull <predefined_image_name>
+
+* run this images:
+->	docker run <predefined_image_name>:<version_name>
+
+Note: if version is not specified when image was pull then uou can write "latest" instead of version name
+
+
+* for run image in interactive mode:
+->	docker run -it <image_id>
+
+
+
+** for pushing images into docker hub:
+
+Note: it is necessary to same image name as repo name
+->	tag is not compulsury for pushing images into docker
+
+* for login into docker hub:
+->	docker login
+ 
+* for push image into docker hub:
+->	docker push <repo_name>:<tagname>
+
+* for change image name:
+->	docker tag <old_name>:<tagename/version> <new_name>:<tagename/version>
+
+* for put container in volume:
+->	docker run -it --rm -v myvolume:/myapp/ denis:02
