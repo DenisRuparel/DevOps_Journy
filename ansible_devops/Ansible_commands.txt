@@ -5,3 +5,7 @@ ansible-playbook <playbook_file_location>
 for check ansible playbook syntax check: 
 --------------------------------
 ansible-playbook --syntax-check <playbook_file_location>
+
+for list all the hosts and groups in your Ansible inventory in a JSON format:
+--------------------------------------------------------------
+ansible-inventory --list
