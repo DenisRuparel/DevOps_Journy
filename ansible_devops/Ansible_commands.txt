@@ -1,0 +1,7 @@
+for run ansible script:
+-----------------
+ansible-playbook <playbook_file_location>
+
+for check ansible playbook syntax check: 
+--------------------------------
+ansible-playbook --syntax-check <playbook_file_location>
