@@ -1,0 +1,29 @@
+Difference between Terraform and Ansible:
+
+Ansible: Ansible is a configuration management tool that focuses on automating the configuration of systems and applications.
+
+Terraform: Terraform is an infrastructure as code (IaC) solution that focuses on managing infrastructure resources.
+
+
+Pull based mechanism:
+-> Pull-based mechanism is less common in Ansible but can be achieved using tools like Ansible Pull. Here’s how it works:
+
+1. Managed Host Initiates the Process
+
+2. Version Control Repository
+
+3. Ansible Pull Command
+
+4. Scheduled Execution
+
+
+
+push based mechanism:
+-> Push-based is the traditional and most common approach in Ansible. Here’s how it works:
+1. Control Node Initiates the Process
+
+2. SSH Connection
+
+3. Playbook Execution
+
+4. Real-time Feedback
