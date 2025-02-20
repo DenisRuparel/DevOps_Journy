@@ -1,0 +1,87 @@
+1. required repository
+
+2. make ec2 instance
+
+3. connect ec2 with windows terminal
+
+4. update system using "sudo apt-get update"
+
+5. install docker using "sudo apt install docker.io"
+
+6. check docker version using "docker --version"
+
+7. check with "docker ps" command
+
+8. check system user with "whoami" command
+
+9. add your user in the docker group using "sudo usermod -aG docker $USER"
+
+10. reboot the system using "sudo reboot" command
+
+11. check containers list using "docker ps" command
+
+12. change directory using "cd meetupmingle-project-with-devops/"
+
+13. run ls cmd for docker file present or not?
+
+14. if not then run "nano Dockerfile" cmd
+
+15. write your docker file in this editor
+
+sample docker file:
+---------------
+
+FROM node:18-alpine
+
+WORKDIR /app
+
+COPY package.json package-lock.json ./
+
+RUN npm install
+
+COPY . .
+
+RUN npm run build
+
+EXPOSE 3000
+
+CMD ["npm", "run", "dev"]
+
+16. run "docker build -t meetupmingle ." for run the container
+
+17. install Java for Jenkins using this cmds:
+	-> sudo apt update
+	-> sudo apt install openjdk-17-jre 
+
+18. for install Jenkins using this cmds:
+	-> curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee \
+  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+	-> sudo apt update
+	-> sudo apt install Jenkins
+
+19. for check Jenkins is start or not in system run "service jenkins status"
+
+20. change firewall permission in AWS go to: our instance -> security -> security groups -> inbound rules -> edit inbound rules -> add rule -> set port 8080 -> set source my ip -> save rules
+
+21. copy public ip from your instance and hit on browser with 8080 port
+-> e.x. http://23.20.236.218:8080/
+
+22. for admin password run "sudo cat /var/lib/jenkins/secrets/initialAdminPassword"
+
+23. click on install suggested plugins then fill required details and click save and finish
+
+24. create pipeline project
+
+25. enter description -> check on GitHub project -> enter URL -> click on advanced and enter display name -> check GitHub hook trigger for GITScm polling
+
+* before run pipeline run this cmd: "sudo usermod -aG docker jenkins" 
+-> sudo reboot
+-> for push image login into dockerHub through command line
+-> for adding cresentials in Jenkins go to this path:
+*) Dashboard -> Manage Jenkins -> Credentials -> System -> Global credentials (unrestricted)
+
+26. write pipline code in script section:
+

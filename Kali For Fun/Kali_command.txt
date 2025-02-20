@@ -1,0 +1,10 @@
+cowsay "Denis Ruparel"
+figlet "Denis Ruparel"
+echo "Hacking is fun!" | lolcat
+sl
+hollywood
+neofetch
+toilet "Kali Linux" --metal
+fortune | cowsay
+cmatrix
+yes "Denis"
