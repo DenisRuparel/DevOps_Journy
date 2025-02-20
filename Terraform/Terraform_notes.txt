@@ -1,0 +1,9 @@
+terraform init – Initializes a Terraform working directory, downloads required providers, 			and sets up the backend.
+
+terraform plan – Shows the execution plan, displaying changes Terraform will make 				without applying them.
+
+terraform apply – Executes the planned changes to create, update, or destroy resources 				as defined in the configuration.
+
+terraform fmt <file_name> – Formats the specified Terraform file to ensure proper syntax 			and readability.
+
+terraform validate – Checks the Terraform configuration for syntax errors and logical 				issues before applying.
